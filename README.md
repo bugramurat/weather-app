@@ -6,6 +6,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+1. Before start, get your free API Key at https://openweathermap.org/api
+2. Enter your API Key in `App.js`
+   ```js
+   5    key: "YOUR_OPEN_WEATHER_MAP_API_KEY",
+   ```
+
 In the project directory, you can run:
 
 ### `npm start`
