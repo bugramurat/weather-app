@@ -1,38 +1,103 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .App {
-  text-align: center;
+    background-image: url(./assets/cold-bg.jpg);
+    background-size: cover;
+    background-position: bottom;
+    transition: 0.4s ease-out;
+}
+.App.warm {
+    background-image: url(./assets/warm-bg.jpg);
+}
+.App.cold {
+    background-image: url(./assets/cold-bg.jpg);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+    min-height: 100vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.75)
+    );
+    padding: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-box {
+    width: 100%;
+    margin: 0 0 75px;
+}
+.search-box .search-bar {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+
+    appearance: none;
+    border: none;
+    background: none;
+    outline: none;
+
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.6)
+    );
+    border-radius: 40px;
+    box-shadow: 0 3px 5px rgba(29, 23, 37, 0.2);
+
+    font-size: 1rem;
+    color: #313131;
+    transition: 0.4s ease;
+}
+.search-box .search-bar:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.search-box .search-bar:focus {
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.location-box .location {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 0 3px 3px rgba(29, 23, 37, 0.4);
+}
+.location-box .date {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 0 3px 3px rgba(29, 23, 37, 0.4);
 }
 
-.App-link {
-  color: #61dafb;
+.weather-box {
+    text-align: center;
 }
+.weather-box .temp {
+    color: #fff;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    position: relative;
+    display: inline-block;
+    margin: 30px auto;
+
+    font-size: 10rem;
+    font-weight: 900;
+
+    text-align: center;
+    text-shadow: 0 3px 13px rgba(29, 23, 37, 0.4);
+}
+.weather-box .weather {
+    color: #fff;
+
+    font-size: 3rem;
+    font-weight: 700;
+
+    text-align: center;
+    text-shadow: 0 3px 13px rgba(29, 23, 37, 0.4);
 }
